@@ -135,6 +135,17 @@ define U-Boot/rongpin-king3399-rk3399
   USE_RKBIN:=1
 endef
 
+define U-Boot/newland-nl5101a-rk3399
+  BUILD_SUBTARGET:=armv8
+  NAME:=Newland NL-5101A
+  BUILD_DEVICES:= \
+    newland_nl5101a
+  DEPENDS:=+PACKAGE_u-boot-newland-nl5101a-rk3399:arm-trusted-firmware-rk3399
+  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
+  ATF:=rk3399_bl31_v1.35.elf
+  USE_RKBIN:=1
+endif
+
 UBOOT_TARGETS := \
   guangmiao-g4c-rk3399 \
   nanopi-r4s-rk3399 \
@@ -142,6 +153,7 @@ UBOOT_TARGETS := \
   rock-pi-4-rk3399 \
   rockpro64-rk3399 \
   rongpin-king3399-rk3399 \
+  newland-nl5101a-rk3399 \
   nanopi-r2c-rk3328 \
   nanopi-r2s-rk3328 \
   orangepi-r1-plus-rk3328 \

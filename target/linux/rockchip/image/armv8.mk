@@ -50,3 +50,12 @@ define Device/radxa_rock-pi-4
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
 endef
 TARGET_DEVICES += radxa_rock-pi-4
+
+define Device/newland_nl5101a
+  DEVICE_VENDOR := Newland
+  DEVICE_MODEL := NL-5101A
+  SOC := rk3399
+  UBOOT_DEVICE_NAME := newland-nl5101a-rk3399
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-bin | gzip | append-metadata
+endef
+TARGET_DEVICES += newland_nl5101a
