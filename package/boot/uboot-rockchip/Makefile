@@ -144,7 +144,7 @@ define U-Boot/newland-nl5101a-rk3399
   PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
   ATF:=rk3399_bl31_v1.35.elf
   USE_RKBIN:=1
-endif
+endef
 
 UBOOT_TARGETS := \
   guangmiao-g4c-rk3399 \
